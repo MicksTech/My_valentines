@@ -32,7 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('nextBtn');
     const NextForm = document.getElementById('NextForm');
     const containerDes = document.querySelector('.container-des');
-
+    
+    NextForm.style.justifyContent = 'center';
+    NextForm.style.alignItems = 'center';
+    
     nextBtn.addEventListener('click', () => {
         NextForm.style.display = 'flex';
         containerDes.style.display = 'none';
