@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-des">
+        <div class="container-bg">
+            <h3>Website Description</h3>
+            <video src="/WIN_20260209_11_24_28_Pro.mp4" controls></video>
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+    <div class="container" id="NextForm">
+      <div class="container-card">
+        <h3>Happy Valentine's Day</h3>
+        <div class="flip-card">
+          <button id="openBtn">&hearts;</button>
+          <div class="paragraph-container">
+            <p id="openParagraph">
+              Will you be my Valentine? 💝
+            </p>
+            <div class="button-control" id="buttonContainer">
+              <button class="option-button" id="ButtonYes">Definitely Yes! 💖</button>
+              <button class="option-button" id="ButtonMaybe">Maybe? 🤔</button>
+              <button class="option-button" id="ButtonFriends">Just Friends 👫</button>
+              <button class="option-button" id="ButtonNo">No 🙅‍♀️</button>
+            </div>
+            
+            <!-- Response Messages -->
+            <div class="response-message celebration" id="yesResponse">
+              💕 Yay! You made my day! Let's make this Valentine's special! 💕
+            </div>
+            <div class="response-message maybe-response" id="maybeResponse">
+              💭 Okay, I understand. Take your time thinking about it! I'll be here waiting. 💭
+            </div>
+            <div class="response-message friends-response" id="friendsResponse">
+              👫 That's perfectly fine! I'm happy to have you as a friend. Let's hang out soon! 👫
+            </div>
+            
+            <!-- Message Form -->
+            <div class="message-form" id="messageForm">
+              <h4>Send a Message to Owner 💌</h4>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="userName">Your Name:</label>
+                  <input type="text" id="userName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                  <label for="userMessage">Your Message:</label>
+                  <textarea id="userMessage" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="userEmail">Your Email (optional):</label>
+                  <input type="email" id="userEmail" placeholder="your@email.com">
+                </div>
+                <button type="submit" class="send-button" id="sendMessageBtn">Send Message 📤</button>
+              </form>
+              <div class="loading" id="loadingIndicator"></div>
+              <div class="api-note">
+                <p>📨 Your message will be sent directly to the owner via email!</p>
+              </div>
+            </div>
+            
+            <!-- Confirmation Message -->
+            <div class="confirmation-message" id="confirmationMessage">
+              <h4>📬 Message Sent Successfully!</h4>
+              <p>Thank you for your response! The owner will receive your message shortly. 💖</p>
+              <p><small>You should receive a confirmation email as well!</small></p>
+            </div>
+            
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage">
+              <h4>❌ Error Sending Message</h4>
+              <p>There was an issue sending your message. Please try again later.</p>
+              <p><small>You can also try the fallback email option.</small></p>
+            </div>
+            
+            <button class="reset-button" id="resetButton" style="display: none;">Try Again 🔄</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
